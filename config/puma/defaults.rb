@@ -12,7 +12,7 @@ tag ""
 # stdout_redirect "#{rails_root}/log/puma_access.log", "#{rails_root}/log/puma_error.log", true
 
 # bind "unix://#{rails_root}/tmp/sockets/puma.sock"
-daemonize
+# daemonize
 
 threads 0, 16
 workers 2
