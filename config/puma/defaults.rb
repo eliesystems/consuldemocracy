@@ -7,11 +7,11 @@ rackup "#{rails_root}/config.ru"
 
 tag ""
 
-pidfile "#{rails_root}/tmp/pids/puma.pid"
-state_path "#{rails_root}/tmp/pids/puma.state"
-stdout_redirect "#{rails_root}/log/puma_access.log", "#{rails_root}/log/puma_error.log", true
+# pidfile "#{rails_root}/tmp/pids/puma.pid"
+# state_path "#{rails_root}/tmp/pids/puma.state"
+# stdout_redirect "#{rails_root}/log/puma_access.log", "#{rails_root}/log/puma_error.log", true
 
-bind "unix://#{rails_root}/tmp/sockets/puma.sock"
+# bind "unix://#{rails_root}/tmp/sockets/puma.sock"
 daemonize
 
 threads 0, 16
