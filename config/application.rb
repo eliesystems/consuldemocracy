@@ -47,7 +47,7 @@ module Consul
     config.action_dispatch.rescue_responses["Apartment::TenantNotFound"] = :not_found
 
     # Store uploaded files on the local file system (see config/storage.yml for options).
-    config.active_storage.service = :local
+    config.active_storage.service = :s3
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.

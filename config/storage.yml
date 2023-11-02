@@ -6,13 +6,12 @@ test:
   service: TenantDisk
   root: <%= Rails.root.join("tmp/storage") %>
 
-# s3:
-#   service: S3
-#   access_key_id: <%= Rails.application.secrets.dig(:s3, :access_key_id) %>
-#   secret_access_key: <%= Rails.application.secrets.dig(:s3, :secret_access_key) %>
-#   region: <%= Rails.application.secrets.dig(:s3, :region) %>
-#   bucket: <%= Rails.application.secrets.dig(:s3, :bucket) %>
-
+s3:
+  service: S3
+  access_key_id: <%= ENV["BUCKETEER_AWS_ACCESS_KEY_ID"] %>
+  secret_access_key: <%= ENV["BUCKETEER_AWS_SECRET_ACCESS_KEY"] %>
+  region: <%= ENV["BUCKETEER_AWS_REGION"] %>
+  bucket: <%= ENV["BUCKETEER_BUCKET_NAME"] %>
 # Remember not to checkin your GCS keyfile to a repository
 # gcs:
 #   service: GCS
