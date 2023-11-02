@@ -1,2 +1,2 @@
 release: bundle exec rails db:migrate
-web: bundle exec puma -C ./config/puma/production.rb
+web: bundle exec rails server -p $PORT -e $RAILS_ENV

@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+ruby "3.1.4"
 
 gem "rails", "6.1.7.4"
 
