@@ -63,7 +63,6 @@ gem "view_component", "~> 3.6.0"
 gem "whenever", "~> 1.0.0", require: false
 gem "wicked_pdf", "~> 2.7.0"
 gem "wkhtmltopdf-binary", "~> 0.12.6"
-
 gem "faker", "~> 3.2.1"
 
 source "https://rails-assets.org" do

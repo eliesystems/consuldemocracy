@@ -25,6 +25,13 @@ default: &default
   <<: *common
   url: <%= ENV['DB_URL'] || ENV['DATABASE_URL'] %>
 
+local: &local
+  <<: *common
+  host: <%= ENV.fetch("POSTGRES_HOST", 'localhost') %>
+  port: <%= ENV.fetch("POSTGRES_PORT", 5432) %>
+  user: <%= ENV.fetch("POSTGRES_USER", 'postgres') %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD", '') %>
+
 development:
   <<: *local
   database: plab_desk_development
@@ -58,7 +65,6 @@ test:
 #
 production:
   <<: *default
-
 
 staging:
   <<: *default
