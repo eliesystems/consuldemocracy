@@ -23,7 +23,7 @@ common: &common
 
 default: &default
   <<: *common
-  url: <%= ENV['DB_URL'] || ENV['DATABASE_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
 local: &local
   <<: *common
